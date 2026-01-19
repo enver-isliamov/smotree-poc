@@ -1,12 +1,11 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
+import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin', 'cyrillic'] })
+const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'SmoTree - Video Review Platform',
-  description: 'Collaborative video review with DaVinci Resolve integration',
+export const metadata = {
+  title: 'SmoTree - Video Review',
+  description: 'Collaborative video review platform',
 }
 
 export default function RootLayout({
