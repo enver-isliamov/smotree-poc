@@ -175,7 +175,6 @@ export default function ProjectPage() {
                 framerate={project.framerate}
                 comments={project.comments}
                 onTimelineClick={handleTimelineClick}
-                onCommentClick={handleCommentClick}
               />
 
               {/* Add comment form */}
@@ -218,7 +217,6 @@ export default function ProjectPage() {
             <div>
               <CommentThread
                 comments={project.comments}
-                onCommentClick={handleCommentClick}
                 onToggleStatus={handleToggleStatus}
               />
             </div>

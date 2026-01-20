@@ -4,14 +4,12 @@ import type { Comment } from '@/types';
 
 interface CommentThreadProps {
   comments: Comment[];
-  onCommentClick: (comment: Comment) => void;
   onToggleStatus: (commentId: string) => void;
   onDelete?: (commentId: string) => void;
 }
 
 export default function CommentThread({
   comments,
-  onCommentClick,
   onToggleStatus,
   onDelete,
 }: CommentThreadProps) {
@@ -37,8 +35,7 @@ export default function CommentThread({
           sortedComments.map((comment) => (
             <div
               key={comment.id}
-              className="p-4 bg-gray-800 rounded-lg hover:bg-gray-750 transition cursor-pointer group"
-              onClick={() => onCommentClick(comment)}
+              className="p-4 bg-gray-800 rounded-lg hover:bg-gray-750 transition group"
             >
               {/* Header */}
               <div className="flex items-start justify-between mb-2">
